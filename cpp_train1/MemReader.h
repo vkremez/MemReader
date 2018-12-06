@@ -7,9 +7,10 @@ class MemReader
 {
 public:
 	MemReader(char* procname, int buffersize = 32);
-	~MemReader();
+	~MemReader(void);
 	void Open(DWORD accessRights = PROCESS_ALL_ACCESS);
 	void Close();
+	DWORD getPID();
 private:
 	void GetPid();
 	char* m_pName;
